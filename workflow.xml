@@ -1,0 +1,17 @@
+<tool id='Kristopher.Booker_hello_cluster_ssh' name='Kristopher.Booker_hello_cluster_ssh'>
+  <command interpreter='bash'>ssh_wrapper.sh</command>
+  <inputs>
+    <param name='whost' label='Workflow host' type='text' value='gcpslurmv2.clusters.pw' width='50%_none'>
+    </param>
+    <param name='rundir' label='Run directory' type='text' value='~/hello_cluster_ssh/' width='50%_none'>
+    </param>
+    <param name='nodes' label='Number of nodes' type='text' value='2' width='50%_none'>
+    </param>
+    <param name='partition' label='Partition' type='text' value='compute' width='50%_none'>
+    </param>
+    <param name='ntasks_per_node' label='Tasks per node' type='text' value='1' width='50%_none'>
+    </param>
+  </inputs>
+  <outputs>
+  </outputs>
+</tool>
