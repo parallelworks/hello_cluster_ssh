@@ -1,0 +1,21 @@
+on:
+  release:
+    types: [published]
+    branches:
+      - development
+
+jobs:
+  test-pw-workflow:
+    runs-on: ubuntu-latest
+    name: test-pw-workflow-beluga
+    steps:
+      - name: run-workflow-beluga
+        id: run-beluga
+        uses: parallelworks/test-workflow-action@v5.0.2
+        with:
+          pw-user-host: 'beluga.parallel.works'
+          pw-api-key: ${{ secrets.KRISTOPHERBOOKER_BELUGA_API_KEY }}
+          pw-user: 'Kristopher.Booker'
+          resource-pool-names: 'gcpslurmv2'
+          workflow-name: 'hello_cluster_ssh'
+          workflow-parameters: '{"inputs|whost": "gcpslurmv2.clusters.pw","inputs|rundir": "~/hello_cluster_ssh/","inputs|nodes": "2","inputs|partition": "compute","inputs|ntasks_per_node": "1","cicd|env_cond|branch": "development","cicd|env_cond|merge": "true","cicd|merge": "true"}'
