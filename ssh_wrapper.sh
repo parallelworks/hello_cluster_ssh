@@ -30,9 +30,10 @@ f_read_cmd_args() {
 
 f_read_cmd_args $@
 
-jobdir=$(basename ${PWD})
+jobdir=$(basename $(dirname ${PWD}))
 
 # CREATE INPUTS
+mkdir -p ${PWD}/rsync_files
 date > ${PWD}/rsync_files/hello.txt
 hostname >> ${PWD}/rsync_files/hello.txt
 
