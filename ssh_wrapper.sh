@@ -53,4 +53,5 @@ echo; echo "rsync -avzq ${whost}:${rundir}/${jobdir}/rsync_files ${PWD}"
 rsync -avzq ${whost}:${rundir}/${jobdir}/rsync_files ${PWD}
 
 # PRINT OUTPUTS
+echo
 cat ${PWD}/rsync_files/hello.txt
