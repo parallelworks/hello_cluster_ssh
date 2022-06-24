@@ -15,7 +15,7 @@ jobs:
         with:
           pw-user-host: 'beluga.parallel.works'
           pw-api-key: ${{ secrets.USERDEMO_API_KEY }}
-          pw-user: 'Kristopher.Booker'
+          pw-user: 'User.Demo'
           resource-pool-names: 'gcpslurmv2'
           workflow-name: 'hello_cluster_ssh'
           workflow-parameters: '{"inputs|whost": "gcpslurmv2.clusters.pw","inputs|rundir": "~/hello_cluster_ssh/","inputs|nodes": "2","inputs|partition": "compute","inputs|ntasks_per_node": "1","cicd|env_cond|branch": "development","cicd|env_cond|merge": "true","cicd|merge": "true"}'
